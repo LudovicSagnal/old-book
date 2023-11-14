@@ -1,0 +1,74 @@
+.contact {
+    position: fixed;
+    height: 600px;
+    width: 500px;
+    right: 20%;
+    z-index: 2;
+    transform: rotate(-3deg);
+    filter: drop-shadow(5px 5px 10px black);
+    .contact-me {
+        height: 150px;
+        width: 200px;
+        background-image: url("./piece-of-paper.webp");
+        background-size: cover;
+        background-position: center;
+        margin: -120px auto 80px;
+        transform: rotate(10deg) translateX(100px);
+        @include center-child;
+        p {
+            font-family: $font-2;
+            font-size: 25px;
+        }
+    }
+    .card {
+        background-image: url("./paper-letter.webp");
+        background-size: cover;
+        height: 300px;
+        width: 500px;
+        transform: rotate(-3deg) translateY(15px) translateX(-10px);
+        border-radius: 5px;
+        z-index: 4;
+        position: relative;
+        filter: drop-shadow(5px 5px 5px black);
+        h3 {
+            position: absolute;
+            top: 20px;
+            left: 10px;
+        }
+        .message-letter {
+            position: absolute;
+            padding: 10px;
+            top: 50px;
+        }
+    }
+    .letter {
+        background-color: rgb(224, 220, 220);
+        height: 300px;
+        width: 500px;
+        border-radius: 5px;
+        z-index: 1;
+        position: relative;
+        .triangle {
+            clip-path: polygon(100% 0, 100% 10%, 50% 35%, 0 10%, 0 0);
+            background-color: rgba(grey, 0.2);
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            filter: drop-shadow(5px 5px 150px black);
+        }
+        .user-info {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            .info-group {
+                display: flex;
+                flex-direction: column;
+                width: 200px;
+                label {
+                    font-family: $font-1;
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+}

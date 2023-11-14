@@ -1,0 +1,14 @@
+.portrait-container {
+    @include center-child;
+    height: 60%;
+    .portrait {
+        border: 2px solid black;
+        border-style: double;
+        border-width: 6px;
+        border-radius: 50%;
+        width: 300px;
+        height: 400px;
+        background-image: url('portrait.webp');
+        background-position: 50% 10%;
+    }    
+}

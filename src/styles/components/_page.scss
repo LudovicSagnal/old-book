@@ -1,10 +1,7 @@
 .page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 3px;
     &:nth-child(even) {
-        background-image: url('./old-page.webp');      
+        background: url('./old-page.webp');      
         background-size: cover;  
     }
     &:nth-child(odd) {
@@ -19,15 +16,15 @@
 }
 
 .inner-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    height: 40%;
-    margin: 45% auto;
+    @include center-child;
+    background-image: url('./inner-page.webp');
+    background-size: cover;
+    width: 450px;
+    height: 300px;
+    margin: 30% auto;
     color: black;
     font-family: $font-1;
-    font-size: 55px;
+    font-size: 50px;
     border: 5px solid black;
     position: relative;
     padding: 20px;
@@ -38,14 +35,12 @@
       top: -10px;
       bottom: -10px;
       width: 100%;
-      border: 3px solid black; // Adjust the color and width as needed
+      border: 3px solid black;
     }
     &::before {
-      left: -10px; // Adjust the distance as needed
-      z-index: -1; // To make it behind the element
+      left: -10px;
     }
     &::after {
-      right: -10px; // Adjust the distance as needed
-      z-index: -1; // To make it behind the element
+      right: -10px;
     }
 }
