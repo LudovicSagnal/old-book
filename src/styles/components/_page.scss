@@ -1,0 +1,51 @@
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    &:nth-child(even) {
+        background-image: url('./old-page.webp');      
+        background-size: cover;  
+    }
+    &:nth-child(odd) {
+        background-image: url('./old-page-flip.webp');
+        background-size: cover;
+    }
+}
+
+.cover {
+    background-image: url('./old-cover-flip.webp');
+    background-size: cover;
+}
+
+.inner-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 40%;
+    margin: 45% auto;
+    color: black;
+    font-family: $font-1;
+    font-size: 55px;
+    border: 5px solid black;
+    position: relative;
+    padding: 20px;
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: -10px;
+      bottom: -10px;
+      width: 100%;
+      border: 3px solid black; // Adjust the color and width as needed
+    }
+    &::before {
+      left: -10px; // Adjust the distance as needed
+      z-index: -1; // To make it behind the element
+    }
+    &::after {
+      right: -10px; // Adjust the distance as needed
+      z-index: -1; // To make it behind the element
+    }
+}
