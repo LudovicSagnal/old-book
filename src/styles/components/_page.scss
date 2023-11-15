@@ -11,8 +11,14 @@
 }
 
 .cover {
-    background-image: url('./old-cover-flip.webp');
+  background-image: url('old-cover.webp');
+  background-size: cover;
+  background-position: center;
+}
+.cover-back {
+    background-image: url('old-cover-flip.webp');
     background-size: cover;
+    background-position: center;
 }
 
 .inner-page {

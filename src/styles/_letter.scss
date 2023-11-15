@@ -3,7 +3,6 @@
     height: 600px;
     width: 500px;
     right: 20%;
-    z-index: 2;
     transform: rotate(-3deg);
     filter: drop-shadow(5px 5px 10px black);
     .contact-me {
@@ -38,7 +37,11 @@
         .message-letter {
             position: absolute;
             padding: 10px;
-            top: 50px;
+            top: 80px;
+            left: 2%;
+            width: 90%;
+            height: 60%;
+            border-radius: 5px;
         }
     }
     .letter {
@@ -58,17 +61,34 @@
         }
         .user-info {
             position: absolute;
-            right: 10px;
+            left: 10px;
             bottom: 10px;
+            h3 {
+                font-family: $font-2;
+                font-size: 30px;
+            }
             .info-group {
                 display: flex;
                 flex-direction: column;
                 width: 200px;
-                label {
-                    font-family: $font-1;
-                    font-size: 40px;
-                }
+                gap: 10px;
             }
         }
+        .send-btn {
+            position: absolute;
+            right: 40px;
+            bottom: 40px;
+            border-radius: 50%;
+            height: 100px;
+            width: 100px;
+            transform: rotate(-3deg);
+        }
     }
+}
+
+.to-the-back {
+    z-index: 2;
+}
+.to-the-front {
+    z-index: 200;
 }
