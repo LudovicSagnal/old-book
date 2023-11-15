@@ -10,10 +10,37 @@
     }
 }
 
-.cover {
+.cover-front {
   background-image: url('old-cover.webp');
   background-size: cover;
   background-position: center;
+  position: relative;
+  .title-container {
+    clip-path: polygon(30% 0, 70% 0, 100% 20%, 100% 80%, 70% 100%, 30% 100%, 0 80%, 0 20%);
+    background-color: goldenrod;
+    padding: 20px;
+    position: absolute;
+    left: 20%;
+    top: 25%;
+    @include center-child;
+    flex-direction: column;
+    .title-border {
+      clip-path: polygon(30% 0, 70% 0, 100% 20%, 100% 80%, 70% 100%, 30% 100%, 0 80%, 0 20%);
+      background-image: url('gold-rust.webp');
+      opacity: 0.3;
+      position: absolute;
+      height: 96%;
+      width: 96%;
+    }
+    h1 {
+      font-family: $font-4;
+      font-size: 40px;
+    }
+    h2 {
+      font-family: $font-4;
+      font-size: 25px;
+    }    
+  }
 }
 .cover-back {
     background-image: url('old-cover-flip.webp');

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Book from './Book';
 import Letter from './Letter';
+import Engraving from './components/Engraving';
 
 const App = () => {
 
@@ -20,6 +21,7 @@ const reOpenBook = () => {
 
   return (
     <main>
+      <Engraving/>
       <Book bookIsClosed={bookIsClosed} playBookCloseSound={playBookCloseSound} reOpenBook={reOpenBook}/>
       <Letter bookIsClosed={bookIsClosed}/>
     </main>

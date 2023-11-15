@@ -1,0 +1,34 @@
+.engraving {
+    font-family: $font-4;
+    font-size: 2.5rem; 
+    position: absolute; 
+    left: 25%; 
+    color: transparent; 
+    transform: rotate(-20deg);
+    background: rgb(40,66,131); 
+    -webkit-background-clip: text; 
+    text-shadow: 2px 5px 5px  
+        rgba(255, 255, 255, 0.4); 
+    span {
+        display: inline-block;
+        transform-origin: center bottom;
+        color: transparent; 
+        background: rgb(40,66,131); 
+        -webkit-background-clip: text; 
+        text-shadow: 2px 5px 5px  
+            rgba(255, 255, 255, 0.4); 
+
+    }
+    .sur {
+        font-size: 2.3rem;
+        transform: rotate(4deg) translateY(2px);
+    }
+    .le {
+        font-size: 2.4rem;
+        transform: rotate(5deg) translateY(5px);
+    }
+    .livre {
+        font-size: 2.8rem;
+        transform: rotate(8deg) translateY(15px);
+    }
+}

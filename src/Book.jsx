@@ -8,11 +8,17 @@ const Book = ({ bookIsClosed, playBookCloseSound, reOpenBook }) => {
         const audioPlayer = new Audio(`./page-flip.mp3`);
         audioPlayer.play();
     };
-    
+
 
     return (
         <HTMLFlipBook width={600} height={900} showCover={true} className='book' bookIsClosed={bookIsClosed}>
-            <div className="cover"></div>
+            <div className="cover-front">
+                <div className='title-container'>
+                    <div className='title-border'></div>
+                    <h1>Ludovic Sagnal</h1>
+                    <h2>Développeur web</h2>                   
+                </div>
+            </div>
             <div className="page" onClick={playPageFlipSound}></div>
             <div className="page" onClick={playPageFlipSound}>
                 <OnceUponATime/>
