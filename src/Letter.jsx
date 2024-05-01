@@ -1,18 +1,19 @@
-import React from 'react';
+import { useEffect } from 'react';
 
 const Letter = ({ bookIsClosed }) => {
 
-    const contact = document.querySelector('#contact');
-
-    if(bookIsClosed) {
-        setTimeout(() => {
-            contact.classList.replace('to-the-back', 'to-the-front');
-        }, 500)
-    }else {
-        setTimeout(() => {
-            contact.classList.replace('to-the-front', 'to-the-back');
-        }, 100)
-    }
+    useEffect(() => {
+        const contact = document.querySelector("#contact");
+        if (bookIsClosed) {
+          setTimeout(() => {
+            contact.classList.replace("to-the-back", "to-the-front");
+          }, 500);
+        } else {
+          setTimeout(() => {
+            contact.classList.replace("to-the-front", "to-the-back");
+          }, 100);
+        }
+      }, [bookIsClosed]);
 
     return (
         <form id='contact' className='contact to-the-back'>

@@ -1,6 +1,7 @@
 import HTMLFlipBook from 'react-pageflip';
 import OnceUponATime from './components/OnceUponATime';
 import Portrait from './components/Portrait';
+import Skills from './components/Skills';
 
 const Book = ({ bookIsClosed, playBookCloseSound, reOpenBook, bookIsShifted, setBookIsShifted }) => {
 
@@ -30,7 +31,9 @@ const Book = ({ bookIsClosed, playBookCloseSound, reOpenBook, bookIsShifted, set
             <div className="page" onClick={playPageFlipSound}>
                 <OnceUponATime/>
             </div>
-            <div className="page" onClick={playPageFlipSound}>Page 2</div>            
+            <div className="page" onClick={playPageFlipSound}>
+                <Skills/>
+            </div>            
             <div className="page" onClick={playPageFlipSound}>
                 <Portrait/>
             </div>
