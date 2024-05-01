@@ -5,17 +5,20 @@
     right: 20%;
     transform: rotate(-3deg);
     filter: drop-shadow(5px 5px 10px black);
+    @media (min-width: 2000px) {
+        right: 28%;
+    }
     .contact-me {
         height: 150px;
         width: 200px;
         background-image: url("./piece-of-paper.webp");
         background-size: cover;
         background-position: center;
-        margin: -120px auto 80px;
+        margin: -50px auto 50px;
         transform: rotate(10deg) translateX(100px);
         @include center-child;
         p {
-            font-family: $font-2;
+            font-family: $font-3;
             font-size: 25px;
         }
     }
@@ -91,4 +94,5 @@
 }
 .to-the-front {
     z-index: 200;
+    transition-delay: 0.5s;
 }

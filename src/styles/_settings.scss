@@ -20,27 +20,39 @@ $font-2: "font-2", sans-serif;
 $font-3: "font-3", sans-serif;
 $font-4: "font-4", sans-serif;
 
-body {
-    margin: 0;
-    background-image: url('/desk.webp');
-    background-size: cover;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-}
-
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.book {
-    z-index: 100;
-}
-
 @mixin center-child {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+#root {
+    min-height: 100vh;
+    @include center-child;
+}
+body {
+    margin: 0;
+    background-image: url('/desk.webp');
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+main {
+    @include center-child;
+    height: 100%;
+    width: 100%;
+}
+
+.book {
+    z-index: 100;
+    transition: transform 0.5s ease-in-out;
+    transition-delay: 1s;
+}
+.shift-left{
+    z-index: 100;
+    transition: transform 0.5s ease-in-out;
+    transition-delay: 1.2s;
+    transform: translateX(-25%);
+  }

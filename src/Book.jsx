@@ -2,16 +2,23 @@ import HTMLFlipBook from 'react-pageflip';
 import OnceUponATime from './components/OnceUponATime';
 import Portrait from './components/Portrait';
 
-const Book = ({ bookIsClosed, playBookCloseSound, reOpenBook }) => {
+const Book = ({ bookIsClosed, playBookCloseSound, reOpenBook, bookIsShifted, setBookIsShifted }) => {
+
+
+    const handleFlipEnd = (page) => {
+        if (page === 5) {
+          setBookIsShifted(true);
+          playBookCloseSound();
+        }
+      };
 
     const playPageFlipSound = () => {
         const audioPlayer = new Audio(`./page-flip.mp3`);
         audioPlayer.play();
     };
 
-
     return (
-        <HTMLFlipBook width={600} height={900} showCover={true} className='book' bookIsClosed={bookIsClosed}>
+        <HTMLFlipBook width={600} height={900} showCover={true} className={`${bookIsShifted ? 'shift-left' : 'book'}`} onFlipEnd={handleFlipEnd} bookIsClosed={bookIsClosed}>
             <div className="cover-front">
                 <div className='title-container'>
                     <div className='title-border'></div>
